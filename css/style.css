@@ -7,11 +7,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --primary-color: #A19E9E;
+
+    --primary-color: #98aa9b;
     --secondary-color: #ffffff;
     --secondary-bg: #F8F8F8;
-    --para-color: ;
-    --heading-color: #00BFFF;
+    --smallheadings-color: #f98100;
+    --heading-color: #170e80;
     --btn-color: #89CFF0;
     --btn-hover-color: #98FB98;
     --secondary-text: #D3D3D3;
@@ -34,7 +35,7 @@ header {
         justify-content: center;
         text-align: right;
         align-items: center;
-        background: #A19E9E;
+        background: var(--secondary-bg);
 
 
         ul {
@@ -65,6 +66,8 @@ nav .navbar-brand {
     font-size: 20px;
     font-weight: 600;
     line-height: 20px;
+    color: var(--smallheadings-color);
+    line-height: 25px;
 }
 
 header .row {
@@ -75,7 +78,7 @@ header .row {
 header.container-fluid {
     margin: 0;
     padding: 0;
-    background-color: var(--primary-color);
+    background-color: var(--smallheadings-color);
 }
 
 header #header_img img {
@@ -91,8 +94,9 @@ header #header_img img {
 #blog h1 {
     font-family: var(--font-family);
     color: var(--heading-color);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 45px;
+    line-height: 60px;
 }
 
 /* <!-- blog  --> */
@@ -115,12 +119,19 @@ header #header_img img {
     height: 80px;
     width: 80px;
     background-color: var(--primary-color);
+    border: 3px solid var(--hover-icons);
 }
 
 #blog .media h6 {
-    line-height: 10px;
     font-family: var(--font-family);
-    line-height: 15px;
+    line-height: 18px;
+    color: var(--smallheadings-color);
+    font-weight: 600;
+
+}
+
+#blog .blog_content h5 {
+    font-weight: 500;
 }
 
 #blog small {
@@ -140,12 +151,17 @@ header #header_img img {
 #blog .blog_content p {
     line-height: 20px;
     font-family: var(--font-family);
+    color: var(--primary-color);
 }
 
 #blog .likes {
     gap: 20px;
     font-family: var(--font-family);
     color: var(--btn-color);
+}
+
+h1 {
+    color: var();
 }
 
 
@@ -155,7 +171,7 @@ header #header_img img {
 
 /* <!-- <footer></footer> --> */
 
-#footer #footer_icons {
+/* #footer #footer_icons {
     display: flex;
     align-items: center;
     justify-content: end;
@@ -164,7 +180,7 @@ header #header_img img {
 }
 
 #footer {
-    background-color: var(--primary-color);
+    background-color: var(--primary-para);
 }
 
 #footer #footer_icons .border_footer {
@@ -186,7 +202,83 @@ header #header_img img {
 
 #footer .contact h6 {
     line-height: 30px;
+} */
+#footer #footer_icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+
 }
+
+#footer #footer_icons .icon_content {
+    font-weight: 400;
+    font-family: var(--font-family);
+    color: #aaa;
+}
+
+#footer #footer_icons .border_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 18px;
+
+}
+
+#footer .navbar-brand {
+    color: var(--smallheadings-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#footer .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+#footer .contact h6 {
+    line-height: 30px;
+}
+
+#footer .contact h6 span {
+    color: var(--smallheadings-color);
+    font-size: 25px;
+}
+
+#footer {
+    margin-top: 30px;
+    background-color: #808080;
+    color: var(--secondary-color);
+}
+
+#footer i:hover {
+    color: var(--smallheadings-color);
+    cursor: pointer;
+
+}
+
+#footer i {
+    font-size: 19px;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navresponsive {
+    display: none;
+}
+
+
 
 @media screen and (max-width:992px) {
     #blog .img {
